@@ -16,7 +16,7 @@ router.get('/',
     // requireAuth,
     async (req: Request, res: Response) => {
         try {
-            let { image_url } = req.query;
+            let image_url: string = req.query.image_url as string;
 
             // Validate the image_url query
             if (!image_url) {
