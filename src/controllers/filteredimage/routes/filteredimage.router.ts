@@ -6,6 +6,9 @@ const router: Router = Router();
 /**
  * GET /filteredimage?image_url={{URL}}
  * 
+ * REQUIRES AUTHENTICATION
+ * JWT authentication token
+ * 
  * QUERY PARAMETERS
  * image_url: URL of a publicly accessible image
  * 
