@@ -28,7 +28,7 @@ router.get('/',
 
             // Check is an image URL
             if (!isValidImageURL(image_url)) {
-                return res.status(400).send(`image_url not well formed`);
+                return res.status(422).send(`image_url not well formed`);
             }
 
             // Filter and image to local path
@@ -37,7 +37,7 @@ router.get('/',
             // Send the resulting file in the response
             await res.sendFile(filteredImageLocalPath, null, async (error) => {
                 if (error) {
-                    return res.status(500).send('Image processing error');
+                    return res.status(422).send('Image processing error');
                 }
                 // Deletes any files on the server on finish of the response
                 await deleteLocalFiles([filteredImageLocalPath]);
