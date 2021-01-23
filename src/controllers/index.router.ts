@@ -6,7 +6,7 @@ const router: Router = Router();
 router.use('/filteredimage', FilteredimageRouter);
 
 router.get('/', async (req: Request, res: Response) => {    
-    return res.status(403).send('/filteredimage');
+    res.send(`image filter API`);
 });
 
 export const IndexRouter: Router = router;

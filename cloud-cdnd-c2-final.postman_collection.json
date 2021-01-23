@@ -82,8 +82,7 @@
 	"variable": [
 		{
 			"key": "HOST",
-			"value": "localhost:8082",
-			"type": "string"
+			"value": "localhost:8082"
 		}
 	]
 }

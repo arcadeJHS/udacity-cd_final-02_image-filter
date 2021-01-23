@@ -26,6 +26,10 @@ import { IndexRouter } from './controllers/index.router';
   });
 
   app.use('/', IndexRouter);
+  
+  app.get('/', async ( req, res ) => {
+    res.send(`image filter API`);
+  });
     
   // Start the Server
   app.listen( port, () => {
