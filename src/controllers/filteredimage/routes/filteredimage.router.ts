@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express';
-import { filterImageFromURL, deleteLocalFiles, isValidImageURL } from '../../../util/util';
+import { filterImageFromURL, deleteLocalFiles, isValidImageURL, requireAuth } from '../../../util/util';
 
 const router: Router = Router();
 
@@ -13,7 +13,7 @@ const router: Router = Router();
  * the filtered image file
  */
 router.get('/',
-    // requireAuth,
+    requireAuth,
     async (req: Request, res: Response) => {
         try {
             let image_url: string = req.query.image_url as string;
