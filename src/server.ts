@@ -20,7 +20,6 @@ import { IndexRouter } from './controllers/index.router';
   let ALLOWED_ORIGINS = ["http://ailuropodarts.wtf", "http://d5n930n193m31.cloudfront.net", "http://udagram-piazza-frontend.s3-website.us-east-2.amazonaws.com", "http://localhost:8100"];
   app.use(function(req, res, next) {
     let origin = req.headers.origin;
-    // res.header("Access-Control-Allow-Origin", "http://localhost:8100");
     // res.header("Access-Control-Allow-Origin", "*");
     let theOrigin = (ALLOWED_ORIGINS.indexOf(origin) >= 0) ? origin : ALLOWED_ORIGINS[0];
     res.header("Access-Control-Allow-Origin", theOrigin);

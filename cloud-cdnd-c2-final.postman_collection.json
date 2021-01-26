@@ -53,8 +53,7 @@
 					"path": [
 						""
 					]
-				},
-				"description": "Root route (403: forbidden)"
+				}
 			},
 			"response": []
 		}
